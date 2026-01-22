@@ -1,33 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Moja Strona</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona Hidenu</title>
     <style>
         body {
-            /* Tu jest link do zdjęcia w tle */
             background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
-            /* Te ustawienia sprawiają, że zdjęcie ładnie pokrywa cały ekran */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             display: flex;
-            justify_content: center;
+            justify-content: center;
             align-items: center;
+            font-family: sans-serif;
         }
-        h1 {
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.3);
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #28a745;
             color: white;
-            font-family: Arial, sans-serif;
-            font-size: 3em;
-            text-shadow: 2px 2px 8px black; /* Cień pod literami, żeby były czytelne */
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
         }
     </style>
 </head>
 <body>
 
-    <h1>Witaj na hidenu.pl</h1>
+    <div class="container">
+        <h1>Witaj na Hidenu.pl</h1>
+        <p>Zostaw wiadomość!</p>
+        
+        <form action="https://formspree.io/f/xyzyxz" method="POST">
+            <input type="email" name="email" placeholder="Twój e-mail" required>
+            <textarea name="message" rows="4" placeholder="Twoja wiadomość..." required></textarea>
+            <button type="submit">Wyślij do mnie</button>
+        </form>
+    </div>
 
 </body>
 </html>
