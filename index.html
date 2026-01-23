@@ -18,15 +18,21 @@
             font-family: sans-serif;
         }
 
-        .container {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-        }
+        ..container {
+    background-color: rgba(255, 255, 255, 0.1); /* Bardzo przezroczyste */
+    backdrop-filter: blur(10px);               /* Rozmycie tła pod okienkiem */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    max-width: 280px;                          /* Zmniejszyłam szerokość */
+    width: 100%;
+    text-align: center;
+    color: white;                              /* Białe napisy, żeby były widoczne */
+    position: absolute;                        /* Pozwala nam przesuwać okienko */
+    right: 5%;                                 /* Przesuwa okienko do prawej krawędzi */
+    bottom: 10%;                               /* Przesuwa okienko trochę nad dół */
+}
+
 
         input, textarea {
             width: 100%;
