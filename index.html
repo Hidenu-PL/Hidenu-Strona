@@ -4,71 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strona Hidenu</title>
-    <style>
+        <style>
         body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* To wypycha wszystko na górę */
-    align-items: center;         /* Środkuje w poziomie */
-    padding-top: 10px;           /* Bardzo mały odstęp od górnej krawędzi */
-    margin: 0;
-    min-height: 100vh;
-}
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* To wypycha wszystko na samą górę */
+            align-items: center;         /* Środkuje w poziomie */
+            padding-top: 10px;           /* Minimalny odstęp od góry */
+            margin: 0;
+            min-height: 100vh;
+            background-color: #121212;   /* Ciemne tło strony */
+            color: white;
+        }
 
-form {
-    margin-top: 0;               /* Usuwa margines nad formularzem */
-    width: 100%;
-    max-width: 500px;            /* Dopasuj szerokość do siebie */
-}
-
-        .background-color {
-    container: rgba(255, 255, 255, 0.1); /* Bardzo przezroczyste */
-    backdrop-filter: blur(10px);               /* Rozmycie tła pod okienkiem */
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    max-width: 280px;                          /* Zmniejszyłam szerokość */
-    width: 100%;
-    text-align: center;
-    color: white;                              /* Białe napisy, żeby były widoczne */
-    position: absolute;                        /* Pozwala nam przesuwać okienko */
-    right: 5%;                                 /* Przesuwa okienko do prawej krawędzi */
-    bottom: 10%;                               /* Przesuwa okienko trochę nad dół */
-}
-
-
-        input, textarea {
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+            max-width: 300px;
             width: 100%;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        textarea {
+            margin-bottom: 15px;
             padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
             border-radius: 5px;
-            box-sizing: border-box;
+            border: none;
         }
 
         button {
-            background-color: #28a745;
+            padding: 10px;
+            background-color: #007bff;
             color: white;
-            padding: 12px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%;
-            font-size: 16px;
         }
     </style>
-</head>
-<body>
-
-    <div class="container">
-        
-        
-        <form action="https://formspree.io/f/mrepkovy" method="POST">
-            <input type="email" name="email" placeholder="Twój e-mail" required>
-            <textarea name="message" rows="4" placeholder="Twoja wiadomość..." required></textarea>
-            <button type="submit">Wyślij do mnie</button>
-        </form>
-    </div>
-
-</body>
-</html>
